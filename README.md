@@ -74,20 +74,20 @@ git clone https://gitee.com/yiming_chang/vue-pure-admin.git
 ```bash
 cd vue-pure-admin
 
-pnpm install
+npm install
 
 ```
 
 - 运行
 
 ```bash
-pnpm serve
+npm serve
 ```
 
 - 打包
 
 ```bash
-pnpm build
+npm build
 ```
 
 ## Docker 支持

@@ -2,15 +2,15 @@ FROM node:18-alpine as build-stage
 
 WORKDIR /app
 RUN corepack enable
-RUN corepack prepare pnpm@8.6.10 --activate
+RUN corepack prepare npm@8.6.10 --activate
 
 RUN npm config set registry https://registry.npmmirror.com
 
-COPY .npmrc package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+COPY .npmrc package.json npm-lock.yaml ./
+RUN npm install --frozen-lockfile
 
 COPY . .
-RUN pnpm build
+RUN npm build
 
 FROM nginx:stable-alpine as production-stage
 

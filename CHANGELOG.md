@@ -569,7 +569,7 @@
 
 ### 🎫 Feat
 
-- Added package size analysis, command `pnpm report`
+- Added package size analysis, command `npm report`
 
 ### 🍏 Perf
 
