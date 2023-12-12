@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { tableData } from "./data";
+import { transformI18n } from "@/plugins/i18n";
 
 const columns: TableColumnList = [
   {
-    label: "日期",
+    // label: "日期",
+    label: transformI18n("test.date"),
     prop: "date"
   },
   {
